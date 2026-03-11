@@ -1,0 +1,34 @@
+MATLAB Project Requirements
+
+
+1. MATLAB Version
+-----------------
+Recommended: MATLAB R2024a
+Minimum: MATLAB R2018a
+
+Reason: Ensures compatibility with the current GUI implementation based on 'uifigure', image quality evaluation functions such as 'psnr' and 'ssim', and the parallel patch-level optimization implemented with 'parfor'. A newer MATLAB version is recommended for better GUI stability, improved parallel execution, and smoother handling of large image data.
+
+2. Required Toolboxes
+---------------------
+The following toolboxes must be installed and licensed for the code to run correctly:
+
+- Image Processing Toolbox
+  (Essential for image I/O, grayscale and color conversions such as 'rgb2gray' and 'rgb2ycbcr', image resizing with 'imresize', padding with 'padarray', gradient computation with 'imgradientxy', and objective quality evaluation using 'psnr' and 'ssim'.)
+
+- Parallel Computing Toolbox
+  (Required for the 'parfor' implementation in 'PIMO_parfor.m'. This toolbox enables parallel patch-level optimization and can significantly improve efficiency when processing high-resolution images or image datasets.)
+
+3. Hardware Recommendations
+---------------------------
+CPU: Modern multi-core processor (Intel Core i5 / AMD Ryzen 5 or better).
+RAM: 8 GB or higher (16 GB recommended).
+Storage: Sufficient free disk space for saving enhanced images and batch-processing results.
+
+Reason: The algorithm performs patch-based optimization on multiple image channels and constructs several intermediate layers, including multi-scale images, gradient maps, texture maps, and residual buffers. When processing high-resolution images or large datasets, both memory usage and runtime will increase noticeably. A multi-core CPU is highly recommended to benefit from the 'parfor' implementation.
+
+4. File System
+--------------
+Permissions: Read/Write access to the working directory.
+
+Reason: The project requires permission to read input images, save enhanced results, create output folders when necessary, and write batch-processing result files such as '.txt', '.csv', and '.mat' summaries.
+
