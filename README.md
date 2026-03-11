@@ -21,13 +21,13 @@ File Structure
 
 ```text
 ├── DE_demo.m         # [Main Program] GUI / main entry for image detail enhancement
-├── PIMO_parfor.m     # [Core Algorithm] Parallel PIMO-based detail enhancement function
-├── grad.m            # [Helper] Sobel-gradient feature extraction
-├── texture.m         # [Helper] Laplacian-texture feature extraction
+├── PIMO_parfor.p     # [Core Algorithm] Parallel PIMO-based detail enhancement function
+├── grad.p            # [Helper] Sobel-gradient feature extraction
+├── texture.p         # [Helper] Laplacian-texture feature extraction
 ├── data/             # [Input Folder] Stores the input images to be enhanced
 ├── results/          # [Output Folder] Stores enhanced images and evaluation results
 └── README.md         # Project description and usage instructions
-
+```
 
 
 
